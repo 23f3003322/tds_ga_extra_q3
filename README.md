@@ -6,8 +6,11 @@ colorTo: blue
 sdk: docker
 sdk_version: "0.0.1"
 app_file: main.py
+app_port: 7860
 pinned: false
 ---
+
+My custom FastAPI app for finding Wikipedia URLs.
 
 Check out the configuration reference at [https://huggingface.co/docs/hub/spaces-config-reference](https://huggingface.co/docs/hub/spaces-config-reference)
 
