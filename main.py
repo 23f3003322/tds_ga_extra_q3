@@ -21,3 +21,6 @@ async def get_wikipedia_url(topic: str):
         url = "https://en.wikipedia.org/wiki/Main_Page"
     return {"topic": topic, "url": url}
 
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
