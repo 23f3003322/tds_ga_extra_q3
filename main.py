@@ -11,16 +11,16 @@ app.add_middleware(
     allow_headers=["*"],  # Allow all headers
 )
 
-# @app.get("/")
-# async def get_wikipedia_url(topic: str):
-#     try:
-#         # Search for the page title using wikipedia library
-#         page = wikipedia.page(topic)
-#         url = page.url
-#     except Exception:
-#         url = "https://en.wikipedia.org/wiki/Main_Page"
-#     return {"topic": topic, "url": url}
+@app.get("/")
+async def get_wikipedia_url(topic: str):
+    try:
+        # Search for the page title using wikipedia library
+        page = wikipedia.page(topic)
+        url = page.url
+    except Exception:
+        url = "https://en.wikipedia.org/wiki/Main_Page"
+    return {"topic": topic, "url": url}
 
-@app.get("/health")
+@app.get("/")
 async def health_check():
     return {"status": "ok"}
